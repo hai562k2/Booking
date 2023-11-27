@@ -8,7 +8,7 @@ export default registerAs('database', () => ({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   synchronize: process.env.NODE_ENV === 'development',
-  entities: [`${__dirname}/../**/*.enity{.ts,.js}`],
-  migrations: [`${__dirname}/../../db/migrations/*{.ts,.js}`],
+  entities: [`${__dirname}/../**/*.entity{.ts,.js}`],
+  migrations: [`${__dirname}/../database/migrations/*{.ts,.js}`],
   migrationsTableName: 'migrations',
 }));

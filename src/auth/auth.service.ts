@@ -101,6 +101,7 @@ export class AuthService {
     const user = await this.userService.findOne({
       username: dto.username,
     });
+
     if (!user) {
       throw new NotFoundException('User not found');
     }
